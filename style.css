@@ -1,0 +1,76 @@
+/* --- style.css --- */
+
+:root {
+    --primary-color: #1F3A93; /* Biru Tua */
+    --accent-color: #5DADE2; /* Biru Lebih Cerah */
+    --text-color: #333;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header & Navigasi (Biru Tua) */
+.app-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+}
+
+.app-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #193179; /* Sedikit lebih gelap dari primary */
+    padding: 10px 0;
+}
+
+.app-nav button {
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.app-nav button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Area Konten */
+.content-area {
+    padding: 20px;
+}
+
+.app-page {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Styling Tugas dengan Deadline */
+.task-item.has-deadline {
+    border-left: 5px solid #FF5733; /* Warna merah/oranye untuk deadline */
+    padding-left: 10px;
+}
+
+/* Styling Waktu Penggunaan */
+#time-display {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 10px;
+}
