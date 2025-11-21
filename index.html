@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker - Biru Tua</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="app-header">
+        <h1>Task Tracker Harian</h1>
+    </header>
+
+    <nav class="app-nav">
+        <button onclick="showPage('profile')">👤 Profil</button>
+        <button onclick="showPage('schedule')">🗓️ Jadwal</button>
+        <button onclick="showPage('subjects')">📚 Mapel</button>
+        <button onclick="showPage('stats')">📊 Statistik</button>
+    </nav>
+
+    <main class="content-area">
+        <section id="profile-page" class="app-page active">
+            <h2>Biodata Pemilik Akun</h2>
+            <form id="profile-form">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" value="Nama Anda"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" value="email@contoh.com">
+                <button type="submit">Simpan Biodata</button>
+            </form>
+        </section>
+
+        <section id="schedule-page" class="app-page hidden">
+            <h2>Jadwal & Tugas</h2>
+            <div id="task-list">
+                </div>
+            <form id="add-task-form">
+                <input type="text" id="task-name" placeholder="Nama Tugas" required>
+                <input type="datetime-local" id="task-deadline">
+                <input type="color" id="task-color" value="#1F3A93">
+                <label>🖼️ Gambar/Audio: <input type="file" id="task-media" accept="image/*,audio/*"></label>
+                <button type="submit">Tambah Tugas</button>
+            </form>
+        </section>
+
+        <section id="subjects-page" class="app-page hidden">
+            <h2>📚 Daftar Mata Pelajaran</h2>
+            <div id="subject-list">
+                </div>
+            <form id="add-subject-form">
+                <input type="text" id="subject-name" placeholder="Nama Mata Pelajaran" required>
+                <textarea id="subject-notes" placeholder="Tambahkan Penjelasan/Catatan..."></textarea>
+                <button type="submit">Tambah Mapel</button>
+            </form>
+        </section>
+
+        <section id="stats-page" class="app-page hidden">
+            <h2>📊 Statistik Aplikasi</h2>
+            
+            <h3>✅ Absensi Penggunaan Harian</h3>
+            <div id="daily-attendance">
+                <p>Status Absensi Hari Ini: <span id="attendance-status">Belum Absen</span></p>
+                <button id="check-in-btn">Absen Sekarang</button>
+            </div>
+            
+            <h3>⏳ Waktu Penggunaan Sesi Ini</h3>
+            <p id="time-display">00 jam 00 menit 00 detik</p>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
